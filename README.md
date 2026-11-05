@@ -11,7 +11,8 @@ Sau khi bật GitHub Pages, trang sẽ ở `https://sonpro147.github.io/son-tran
 - Tìm các ô nền vàng nhạt trên thiệp: đây là thông tin còn thiếu và cần thay bằng dữ liệu thật.
 - Ảnh đang là khung trắng. Trong `index.html`, thay các khối `photo-placeholder` / `gallery-frame` bằng `<img src="images/ten-anh.jpg" alt="...">` và thêm ảnh vào thư mục `images/`.
 - Khi có ngày cưới, sửa `weddingDate` trong `script.js` theo định dạng `YYYY-MM-DD`; sau đó cập nhật các ô ngày, giờ, tháng và năm trong `index.html`.
-- Thay địa điểm và liên kết Google Maps, thông tin liên hệ; kết nối RSVP nếu muốn khách xác nhận tham dự trực tuyến.
+- Biểu mẫu lời chúc gồm tên và nội dung, không yêu cầu đăng nhập. Phản hồi được lưu trong Google Sheet riêng tư do Google Forms tạo và liên kết.
+- Thay địa điểm và liên kết Google Maps, thông tin liên hệ khi có dữ liệu thật.
 - Phần nhạc hiện tạo giai điệu demo bằng Web Audio, không dùng tệp nhạc có bản quyền.
 - Hai khung bản đồ nhà trai/nhà gái lấy địa chỉ từ `venueLocations` trong `script.js`; điền địa chỉ và từ khoá bản đồ để hiện Google Maps.
 - Nút **Mở hộp quà** mở hộp thoại QR. Khi có ảnh QR và hai bạn đồng ý công khai, thêm ảnh vào `assets/qr-chuyen-khoan.png` rồi đặt `giftQrImage` trong `script.js`.
@@ -22,6 +23,7 @@ Sau khi bật GitHub Pages, trang sẽ ở `https://sonpro147.github.io/son-tran
 ## Chạy tại máy
 
 Mở `index.html` trong trình duyệt hoặc chạy một máy chủ static đơn giản từ thư mục này.
+
 
 
 
