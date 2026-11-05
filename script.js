@@ -54,10 +54,6 @@ function showToast(message) {
   toastTimer = window.setTimeout(() => toast.classList.remove("show"), 3200);
 }
 
-document.querySelector("#rsvpButton").addEventListener("click", () => {
-  showToast("Nút demo thôi nhé — thêm số liên hệ hoặc biểu mẫu RSVP để khách xác nhận.");
-});
-
 const giftDialog = document.querySelector("#giftDialog");
 document.querySelector("#giftButton").addEventListener("click", () => giftDialog.showModal());
 document.querySelector("#giftClose").addEventListener("click", () => giftDialog.close());
@@ -117,4 +113,5 @@ soundButton.addEventListener("click", async () => {
   soundButton.setAttribute("aria-pressed", "true");
   document.querySelector("#soundLabel").textContent = "Tắt nhạc nền";
 });
+
 
