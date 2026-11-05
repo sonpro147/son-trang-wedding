@@ -17,9 +17,11 @@ Sau khi bật GitHub Pages, trang sẽ ở `https://sonpro147.github.io/son-tran
 - Nút **Mở hộp quà** mở hộp thoại QR. Khi có ảnh QR và hai bạn đồng ý công khai, thêm ảnh vào `assets/qr-chuyen-khoan.png` rồi đặt `giftQrImage` trong `script.js`.
 - Hiệu ứng tim được phủ nhẹ trên trang; người xem có thể tắt hiệu ứng động từ cài đặt giảm chuyển động của thiết bị.
 - Bản mobile có bố cục một cột và bản đồ co theo chiều rộng màn hình.
+- Ảnh thật sẽ tự nằm gọn trong khung, dùng `object-fit: cover` để ảnh dọc/ngang không làm xô bố cục.
 
 ## Chạy tại máy
 
 Mở `index.html` trong trình duyệt hoặc chạy một máy chủ static đơn giản từ thư mục này.
+
 
 
