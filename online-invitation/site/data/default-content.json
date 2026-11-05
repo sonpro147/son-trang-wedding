@@ -1,0 +1,83 @@
+{
+  "couple": {
+    "groom": "Khắc Sơn",
+    "bride": "Huyền Trang"
+  },
+  "hero": {
+    "kicker": "Một lời hẹn cho ngày thật đặc biệt",
+    "dateLabel": "NGÀY CƯỚI · ĐANG CHỜ CẬP NHẬT",
+    "photoUrl": "",
+    "photoAlt": "Ảnh cưới của Khắc Sơn và Huyền Trang"
+  },
+  "story": {
+    "eyebrow": "GỬI NHỮNG NGƯỜI THƯƠNG",
+    "title": "Một chương mới",
+    "accent": "bắt đầu từ đây.",
+    "body": "Chúng mình đã tìm thấy nhau giữa những điều bình dị. Và giờ đây, Sơn & Trang mong được cùng gia đình, bạn bè viết tiếp câu chuyện ấy trong một ngày thật đáng nhớ.",
+    "closing": "Rất mong bạn sẽ có mặt để chung vui cùng chúng mình."
+  },
+  "invitation": {
+    "eyebrow": "TRÂN TRỌNG KÍNH MỜI",
+    "title": "Đến chung vui",
+    "accent": "cùng gia đình chúng mình",
+    "parents": {
+      "groom": ["[Tên bố chú rể]", "[Tên mẹ chú rể]"],
+      "bride": ["[Tên bố cô dâu]", "[Tên mẹ cô dâu]"]
+    },
+    "events": [
+      {"label": "LỄ THÀNH HÔN", "date": "[Giờ, ngày, tháng, năm]", "venue": "TƯ GIA NHÀ TRAI", "address": "[Địa chỉ]"},
+      {"label": "TIỆC CƯỚI", "date": "[Giờ, ngày, tháng, năm]", "venue": "TƯ GIA / NHÀ HÀNG", "address": "[Địa chỉ]"}
+    ],
+    "weddingDate": ""
+  },
+  "calendar": {
+    "eyebrow": "HẸN BẠN NHÉ",
+    "title": "Lưu lại ngày",
+    "accent": "mình gặp nhau.",
+    "description": "Ngày đẹp nhất sẽ sớm được cập nhật. Tấm lịch bên cạnh đang chừa chỗ cho ngày ấy.",
+    "monthLabel": "[THÁNG]",
+    "yearLabel": "[NĂM]",
+    "dateLabel": "?",
+    "footer": "Một dấu mốc nhỏ, một kỷ niệm thật lâu."
+  },
+  "gallery": {
+    "eyebrow": "NHỮNG KHOẢNH KHẮC CỦA CHÚNG MÌNH",
+    "title": "Album",
+    "accent": "ảnh",
+    "description": "Một vài khung hình đang đợi được lấp đầy bằng những kỷ niệm đẹp của Sơn & Trang.",
+    "items": [
+      {"url": "", "alt": "Ảnh cưới 01"},
+      {"url": "", "alt": "Ảnh cưới 02"},
+      {"url": "", "alt": "Ảnh cưới 03"}
+    ]
+  },
+  "locations": {
+    "eyebrow": "ĐƯỜNG ĐẾN NGÀY VUI",
+    "title": "Hai nơi thân thương,",
+    "accent": "một ngày sum vầy.",
+    "description": "Bản đồ nhà trai và nhà gái sẽ hiện ở đây khi có địa chỉ.",
+    "groom": {"title": "Nhà chú rể", "address": "[Địa chỉ nhà trai · cần cập nhật]", "mapQuery": "", "mapLink": ""},
+    "bride": {"title": "Nhà cô dâu", "address": "[Địa chỉ nhà gái · cần cập nhật]", "mapQuery": "", "mapLink": ""}
+  },
+  "rsvp": {
+    "eyebrow": "GỬI ĐÔI LỜI THƯƠNG",
+    "title": "Một lời chúc",
+    "accent": "cho ngày vui.",
+    "description": "Để lại tên và lời chúc, chúng mình sẽ đọc sau ngày cưới nhé.",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSc1Yyb6xd1J9XGpg5xDPTUhu3T1_sVExWppXBbsQ3lL8UBPfg/viewform",
+    "thanks": "Lời chúc gửi qua biểu mẫu riêng; lời chúc đã duyệt sẽ hiện trong sổ bên dưới."
+  },
+  "gift": {
+    "label": "HỘP QUÀ MỪNG CƯỚI",
+    "description": "Tấm lòng của bạn là món quà quý nhất.",
+    "title": "Hộp quà",
+    "accent": "mừng cưới",
+    "message": "Cảm ơn bạn đã gửi lời chúc và sẻ chia niềm vui cùng chúng mình.",
+    "qrUrl": ""
+  },
+  "music": {
+    "url": ""
+  },
+  "comments": [],
+  "contact": "THÔNG TIN LIÊN HỆ · [SỐ ĐIỆN THOẠI / ZALO]"
+}

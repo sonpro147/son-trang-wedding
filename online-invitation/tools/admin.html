@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ee">
+  <title>Quản trị thiệp cưới — Sơn & Trang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <a class="wordmark" href="index.html">S <i>&</i> T</a>
+      <div><p class="eyebrow">BẢNG ĐIỀU KHIỂN RIÊNG</p><h1>Quản lý thiệp</h1></div>
+      <a class="preview-link" href="index.html" target="_blank" rel="noreferrer">Xem thiệp ↗</a>
+    </header>
+
+    <section class="local-notice">
+      <strong>Trình quản lý chỉ chạy trên máy này.</strong>
+      <span>Lưu nội dung và tệp vào project. Những thay đổi chưa lên GitHub và chưa hiện với khách.</span>
+    </section>
+
+    <section class="editor" id="editorPanel">
+      <div class="editor-toolbar">
+        <div><span class="status-dot"></span><span id="localServerStatus">Đang kết nối project...</span><p id="publishStatus" class="muted status-copy">Lưu ở project local</p></div>
+        <a class="quiet-button" href="../docs/admin-setup.md">Cách dùng</a>
+      </div>
+
+      <div class="publish-bar">
+        <div><strong>Nội dung trong project</strong><span>Lưu để cập nhật bản local. GitHub chỉ thay đổi sau khi bạn chủ động đẩy project lên.</span></div>
+        <div class="publish-actions">
+          <a class="quiet-button preview-draft" id="previewDraft" href="index.html?preview=local" target="_blank" rel="noreferrer">Xem bản local ↗</a>
+          <button class="primary-button" id="saveDraftButton" type="button">LƯU VÀO PROJECT</button>
+        </div>
+      </div>
+      <p class="form-status" id="editorStatus" role="status" aria-live="polite"></p>
+
+      <form id="contentForm" class="content-form">
+        <section class="form-section">
+          <div class="section-heading"><span>01</span><div><h2>Hai bạn</h2><p>Tên hiển thị trên thiệp.</p></div></div>
+          <div class="field-grid two">
+            <label>Tên chú rể<input data-path="couple.groom" required></label>
+            <label>Tên cô dâu<input data-path="couple.bride" required></label>
+            <label class="wide">Lời mở đầu<input data-path="hero.kicker"></label>
+            <label class="wide">Dòng ngày cưới ở trang đầu<input data-path="hero.dateLabel"></label>
+            <label class="wide">Ảnh trang đầu<div class="upload-row"><input data-path="hero.photoUrl" type="url" placeholder="URL ảnh sau khi tải lên"><input data-upload="hero-photo" type="file" accept="image/jpeg,image/png,image/webp"><button class="quiet-button upload-button" type="button" data-upload-button="hero-photo">Tải ảnh</button></div></label>
+            <label class="wide">Mô tả ảnh (hỗ trợ trình đọc màn hình)<input data-path="hero.photoAlt"></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading"><span>02</span><div><h2>Câu chuyện</h2><p>Đoạn giới thiệu và lời nhắn dành cho khách.</p></div></div>
+          <div class="field-grid two">
+            <label>Dòng nhỏ<input data-path="story.eyebrow"></label>
+            <label>Tiêu đề chính<input data-path="story.title"></label>
+            <label class="wide">Tiêu đề nhấn<input data-path="story.accent"></label>
+            <label class="wide">Câu chuyện<textarea data-path="story.body" rows="4"></textarea></label>
+            <label class="wide">Lời mời<textarea data-path="story.closing" rows="2"></textarea></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading"><span>03</span><div><h2>Ngày cưới & gia đình</h2><p>Lịch, đếm ngược, tên cha mẹ và thông tin hai buổi lễ.</p></div></div>
+          <div class="field-grid two">
+            <label>Dòng kính mời<input data-path="invitation.eyebrow"></label>
+            <label>Ngày cưới (để đếm ngược)<input data-path="invitation.weddingDate" type="date"></label>
+            <label>Tiêu đề<input data-path="invitation.title"></label>
+            <label>Tiêu đề nhấn<input data-path="invitation.accent"></label>
+          </div>
+          <h3>Phần lịch</h3>
+          <div class="field-grid two">
+            <label>Dòng nhỏ<input data-path="calendar.eyebrow"></label>
+            <label>Tiêu đề<input data-path="calendar.title"></label>
+            <label>Tiêu đề nhấn<input data-path="calendar.accent"></label>
+            <label>Mô tả<textarea data-path="calendar.description" rows="2"></textarea></label>
+            <label class="wide">Dòng cuối tấm lịch<input data-path="calendar.footer"></label>
+          </div>
+          <h3>Gia đình</h3>
+          <div class="field-grid two">
+            <label>Tên cha nhà trai<input data-path="invitation.parents.groom.0"></label>
+            <label>Tên mẹ nhà trai<input data-path="invitation.parents.groom.1"></label>
+            <label>Tên cha nhà gái<input data-path="invitation.parents.bride.0"></label>
+            <label>Tên mẹ nhà gái<input data-path="invitation.parents.bride.1"></label>
+          </div>
+          <h3>Lễ thành hôn</h3>
+          <div class="field-grid two">
+            <label>Ngày, giờ<input data-path="invitation.events.0.date"></label>
+            <label>Địa điểm ghi trên thiệp<input data-path="invitation.events.0.venue"></label>
+            <label class="wide">Địa chỉ<input data-path="invitation.events.0.address"></label>
+          </div>
+          <h3>Tiệc cưới</h3>
+          <div class="field-grid two">
+            <label>Ngày, giờ<input data-path="invitation.events.1.date"></label>
+            <label>Địa điểm ghi trên thiệp<input data-path="invitation.events.1.venue"></label>
+            <label class="wide">Địa chỉ<input data-path="invitation.events.1.address"></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading"><span>04</span><div><h2>Ảnh & nhạc</h2><p>Ảnh và nhạc được lưu trong thư mục của project.</p></div></div>
+          <div class="media-field">
+            <div><h3>Album ảnh</h3><p class="muted">Tải ảnh JPG, PNG hoặc WebP. Có thể đổi thứ tự và mô tả ảnh. Tệp chỉ được đưa lên trang khi bạn push project lên GitHub.</p></div>
+            <div class="field-grid two">
+              <label>Dòng nhỏ<input data-path="gallery.eyebrow"></label>
+              <label>Tiêu đề<input data-path="gallery.title"></label>
+              <label>Tiêu đề nhấn<input data-path="gallery.accent"></label>
+              <label>Mô tả<textarea data-path="gallery.description" rows="2"></textarea></label>
+            </div>
+            <div class="upload-row"><input id="galleryUpload" type="file" accept="image/jpeg,image/png,image/webp" multiple><button class="quiet-button" id="addGalleryButton" type="button">Thêm ảnh</button></div>
+            <div class="gallery-editor" id="galleryEditor"></div>
+          </div>
+          <div class="field-grid two media-bottom">
+            <label class="wide">Tệp nhạc nền (MP3, OGG hoặc WAV)<div class="upload-row"><input data-path="music.url" type="url" placeholder="URL nhạc sau khi tải lên"><input data-upload="music" type="file" accept="audio/mpeg,audio/ogg,audio/wav,audio/mp4"><button class="quiet-button upload-button" type="button" data-upload-button="music">Tải nhạc</button></div></label>
+            <label class="wide">Mã QR mừng cưới<div class="upload-row"><input data-path="gift.qrUrl" type="url" placeholder="Đường dẫn QR trong project"><input data-upload="gift-qr" type="file" accept="image/jpeg,image/png,image/webp"><button class="quiet-button upload-button" type="button" data-upload-button="gift-qr">Tải QR</button></div><small>QR sẽ công khai cùng thiệp sau khi bạn push project lên GitHub. Chỉ thêm khi hai bạn đồng ý công khai.</small></label>
+            <label>Nhãn hộp quà<input data-path="gift.label"></label>
+            <label>Lời nhắn trên hộp quà<input data-path="gift.description"></label>
+            <label>Tiêu đề hộp quà<input data-path="gift.title"></label>
+            <label>Tiêu đề nhấn<input data-path="gift.accent"></label>
+            <label class="wide">Lời cảm ơn<textarea data-path="gift.message" rows="2"></textarea></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading"><span>05</span><div><h2>Địa điểm & liên hệ</h2><p>Địa chỉ và liên kết bản đồ của hai gia đình.</p></div></div>
+          <h3>Nhà trai</h3>
+          <div class="field-grid two">
+            <label>Tên địa điểm<input data-path="locations.groom.title"></label>
+            <label>Địa chỉ<input data-path="locations.groom.address"></label>
+            <label>Từ khóa tìm trên bản đồ<input data-path="locations.groom.mapQuery"></label>
+            <label>Liên kết bản đồ (có thể để trống)<input data-path="locations.groom.mapLink" type="url"></label>
+          </div>
+          <h3>Nhà gái</h3>
+          <div class="field-grid two">
+            <label>Tên địa điểm<input data-path="locations.bride.title"></label>
+            <label>Địa chỉ<input data-path="locations.bride.address"></label>
+            <label>Từ khóa tìm trên bản đồ<input data-path="locations.bride.mapQuery"></label>
+            <label>Liên kết bản đồ (có thể để trống)<input data-path="locations.bride.mapLink" type="url"></label>
+          </div>
+          <h3>Tiêu đề phần bản đồ</h3>
+          <div class="field-grid two">
+            <label>Dòng nhỏ<input data-path="locations.eyebrow"></label>
+            <label>Tiêu đề<input data-path="locations.title"></label>
+            <label>Tiêu đề nhấn<input data-path="locations.accent"></label>
+            <label>Mô tả<input data-path="locations.description"></label>
+          </div>
+          <div class="field-grid two extra-fields">
+            <label class="wide">Liên kết biểu mẫu lời chúc<input data-path="rsvp.url" type="url"></label>
+            <label>Dòng nhỏ lời chúc<input data-path="rsvp.eyebrow"></label>
+            <label>Tiêu đề lời chúc<input data-path="rsvp.title"></label>
+            <label>Tiêu đề nhấn<input data-path="rsvp.accent"></label>
+            <label>Mô tả lời chúc<input data-path="rsvp.description"></label>
+            <label class="wide">Ghi chú dưới biểu mẫu<input data-path="rsvp.thanks"></label>
+            <label class="wide">Thông tin liên hệ ở chân trang<input data-path="contact"></label>
+          </div>
+        </section>
+        <section class="form-section">
+          <div class="section-heading"><span>06</span><div><h2>Sổ lời chúc</h2><p>Thêm lời chúc nhận từ Google Form để hiển thị công khai; có thể sửa hoặc xóa trước khi lưu.</p></div></div>
+          <p class="muted">Ngày giờ sẽ hiện như bình luận. Sổ này được lưu trong project và chỉ đến GitHub khi bạn chủ động đẩy thay đổi.</p>
+          <div class="guestbook-admin" id="guestbookAdmin"></div>
+          <button class="quiet-button" id="addCommentButton" type="button">THÊM LỜI CHÚC</button>
+        </section>
+      </form>
+    </section>
+    <footer class="admin-footer"><a href="index.html">← Trở về thiệp</a><span>Lưu ở máy này · chưa có gì được đẩy lên GitHub.</span></footer>
+  </main>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

@@ -1,1 +1,18 @@
-TIEN_DO.md
+# Private project material kept on this computer
+/TIEN_DO.md
+/media/
+/planning/
+/family-care/
+/online-invitation/docs/project-status.md
+/online-invitation/integrations/google-apps-script/
+
+# Local caches and generated dependencies
+/.tmp.*/
+/node_modules/
+**/node_modules/
+*.inspect.ndjson
+
+# Operating system files
+Thumbs.db
+desktop.ini
+.DS_Store
