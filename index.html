@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="media.css">
 </head>
 <body>
   <div class="page-shell">
@@ -19,8 +21,9 @@
         <a href="#story">Chuyện chúng mình</a>
         <a href="#details">Lễ cưới</a>
         <a href="#gallery">Album</a>
+        <a href="#maps">Bản đồ</a>
       </nav>
-      <button class="sound-button" id="soundToggle" type="button" aria-pressed="false"><span class="sound-dot"></span><span id="soundLabel">Bật nhạc</span></button>
+      <button class="sound-button" id="soundToggle" type="button" aria-pressed="false"><span class="sound-dot"></span><span id="soundLabel">Bật nhạc nền</span></button>
     </header>
 
     <main>
@@ -79,18 +82,43 @@
         <div class="gallery-grid"><div class="gallery-frame gallery-tall"><span class="frame-number">01</span><span class="photo-cross">+</span><span class="frame-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span></div><div class="gallery-frame"><span class="frame-number">02</span><span class="photo-cross">+</span><span class="frame-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span></div><div class="gallery-frame gallery-offset"><span class="frame-number">03</span><span class="photo-cross">+</span><span class="frame-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span></div></div>
       </section>
 
-      <section class="location-section">
-        <div class="location-photo photo-placeholder"><span class="photo-mark">♡</span><span class="photo-caption">ẢNH ĐỊA ĐIỂM · TUỲ CHỌN</span></div>
-        <div class="location-copy"><div class="section-index">05 <span>—</span> FIND US</div><p class="eyebrow">ĐƯỜNG ĐẾN NGÀY VUI</p><h2>Chúng mình<br><i>đợi bạn ở đây.</i></h2><span class="mini-label">ĐỊA ĐIỂM TỔ CHỨC</span><strong class="edit-value address">[Tên địa điểm / tư gia]</strong><p class="edit-value address-detail">[Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố]</p><div class="map-placeholder"><span>⌖</span><div><b>BẢN ĐỒ SẼ ĐƯỢC CẬP NHẬT</b><small>Thay bằng liên kết Google Maps khi có địa chỉ.</small></div></div><a class="text-link edit-link" href="#details">THÊM ĐỊA CHỈ VÀO THIỆP <span>↗</span></a></div>
+      <section class="maps-section section-pad" id="maps">
+        <div class="section-index">05 <span>—</span> FIND US</div>
+        <div class="maps-heading"><p class="eyebrow">ĐƯỜNG ĐẾN NGÀY VUI</p><h2>Hai nơi thân thương,<br><i>một ngày sum vầy.</i></h2><p class="muted">Bản đồ nhà trai và nhà gái sẽ hiện ở đây khi có địa chỉ.</p></div>
+        <div class="map-cards">
+          <article class="map-card" data-venue="groom">
+            <div class="map-card-heading"><span class="mini-label">LỄ NHÀ TRAI</span><b>Nhà chú rể</b></div>
+            <p class="venue-address edit-value">[Địa chỉ nhà trai · cần cập nhật]</p>
+            <div class="map-embed-slot"><div class="map-placeholder"><span>⌖</span><div><b>CHỜ ĐỊA CHỈ NHÀ TRAI</b><small>Điền địa chỉ trong script.js để nhúng bản đồ.</small></div></div></div>
+            <a class="text-link map-link" hidden target="_blank" rel="noreferrer">MỞ BẢN ĐỒ <span>↗</span></a>
+          </article>
+          <article class="map-card" data-venue="bride">
+            <div class="map-card-heading"><span class="mini-label">LỄ NHÀ GÁI</span><b>Nhà cô dâu</b></div>
+            <p class="venue-address edit-value">[Địa chỉ nhà gái · cần cập nhật]</p>
+            <div class="map-embed-slot"><div class="map-placeholder"><span>⌖</span><div><b>CHỜ ĐỊA CHỈ NHÀ GÁI</b><small>Điền địa chỉ trong script.js để nhúng bản đồ.</small></div></div></div>
+            <a class="text-link map-link" hidden target="_blank" rel="noreferrer">MỞ BẢN ĐỒ <span>↗</span></a>
+          </article>
+        </div>
       </section>
 
-      <section class="rsvp-section section-pad"><div class="rsvp-card"><span class="rsvp-flower">✳</span><p class="eyebrow">SỰ HIỆN DIỆN CỦA BẠN</p><h2>Là món quà<br><i>quý giá nhất.</i></h2><p class="muted">Hãy nhắn cho chúng mình một lời xác nhận nhé.</p><button class="primary-button" id="rsvpButton" type="button">GỬI LỜI CHÚC <span>↗</span></button><p class="edit-note">Nút demo · chưa kết nối biểu mẫu xác nhận tham dự.</p></div></section>
+      <section class="rsvp-section section-pad"><div class="rsvp-card"><span class="rsvp-flower">✳</span><p class="eyebrow">SỰ HIỆN DIỆN CỦA BẠN</p><h2>Là món quà<br><i>quý giá nhất.</i></h2><p class="muted">Hãy nhắn cho chúng mình một lời xác nhận nhé.</p><button class="primary-button" id="rsvpButton" type="button">GỬI LỜI CHÚC <span>↗</span></button><p class="edit-note">Nút demo · chưa kết nối biểu mẫu xác nhận tham dự.</p>
+        <div class="gift-invite"><div class="gift-icon" aria-hidden="true"><span>♡</span></div><div><span class="mini-label">HỘP QUÀ MỪNG CƯỚI</span><p class="muted">Tấm lòng của bạn là món quà quý nhất.</p></div><button class="gift-button" id="giftButton" type="button">MỞ HỘP QUÀ <span>↗</span></button></div>
+      </div></section>
     </main>
 
     <footer class="footer"><div class="footer-monogram">S <i>&</i> T</div><p>WITH LOVE, KHẮC SƠN & HUYỀN TRANG</p><span class="edit-note">THÔNG TIN LIÊN HỆ · [SỐ ĐIỆN THOẠI / ZALO]</span><small>Made with love · 2026</small></footer>
   </div>
+  <div class="heart-layer" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span></div>
+  <dialog class="gift-dialog" id="giftDialog" aria-labelledby="giftTitle">
+    <button class="dialog-close" id="giftClose" type="button" aria-label="Đóng hộp quà">×</button>
+    <span class="rsvp-flower">✳</span><p class="eyebrow">WITH LOVE</p><h2 id="giftTitle">Hộp quà<br><i>mừng cưới</i></h2>
+    <p class="muted">Cảm ơn bạn đã gửi lời chúc và sẻ chia niềm vui cùng chúng mình.</p>
+    <div class="qr-placeholder" id="qrPlaceholder"><span class="qr-heart">♡</span><b>QR CHUYỂN KHOẢN</b><small>ẢNH QR · CẦN THÊM VÀ XÁC NHẬN CÔNG KHAI</small></div>
+    <p class="edit-note">Chưa có mã QR. Đặt ảnh tại <code>assets/qr-chuyen-khoan.png</code> sau khi hai bạn xác nhận muốn công khai.</p>
+  </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
 </html>
+
 
