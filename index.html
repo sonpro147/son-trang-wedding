@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ee">
+  <meta name="description" content="Thiệp cưới online của Khắc Sơn & Huyền Trang — một ngày thật đẹp đang chờ được viết tiếp.">
+  <title>Khắc Sơn & Huyền Trang — Thiệp cưới</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="Về đầu trang">S <span>&</span> T</a>
+      <nav aria-label="Điều hướng chính">
+        <a href="#story">Chuyện chúng mình</a>
+        <a href="#details">Lễ cưới</a>
+        <a href="#gallery">Album</a>
+      </nav>
+      <button class="sound-button" id="soundToggle" type="button" aria-pressed="false"><span class="sound-dot"></span><span id="soundLabel">Bật nhạc</span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SAVE OUR DATE <span class="eyebrow-line"></span></p>
+          <p class="hero-kicker">Một lời hẹn cho ngày thật đặc biệt</p>
+          <h1>Khắc Sơn <i>&</i><br>Huyền Trang</h1>
+          <p class="hero-date"><span class="edit-pill">NGÀY CƯỚI · ĐANG CHỜ CẬP NHẬT</span></p>
+          <a class="round-link" href="#story" aria-label="Khám phá tấm thiệp"><span>↓</span></a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo photo-placeholder" role="img" aria-label="Khung ảnh cưới cần thay ảnh">
+            <span class="photo-mark">S <b>&</b> T</span>
+            <span class="photo-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span>
+          </div>
+          <div class="hero-stamp"><span>THE</span><strong>WEDDING<br>INVITATION</strong><span>OUR NEXT CHAPTER</span></div>
+          <span class="decor decor-one">✳</span><span class="decor decor-two">✳</span>
+        </div>
+        <div class="hero-side-note">MỘT NGÀY · HAI NGƯỜI · MỘT LỜI HẸN</div>
+      </section>
+
+      <section class="story section-pad" id="story">
+        <div class="section-index">01 <span>—</span> OUR STORY</div>
+        <div class="story-grid">
+          <div class="story-heading"><p class="eyebrow">GỬI NHỮNG NGƯỜI THƯƠNG</p><h2>Một chương mới<br><i>bắt đầu từ đây.</i></h2></div>
+          <div class="story-copy"><span class="quote-mark">“</span><p>Chúng mình đã tìm thấy nhau giữa những điều bình dị. Và giờ đây, Sơn & Trang mong được cùng gia đình, bạn bè viết tiếp câu chuyện ấy trong một ngày thật đáng nhớ.</p><p class="muted">Rất mong bạn sẽ có mặt để chung vui cùng chúng mình.</p><div class="edit-note">✦ Có thể thay đoạn lời mời này bằng câu chuyện riêng của hai bạn.</div></div>
+        </div>
+        <div class="couple-names"><span>KHẮC SƠN</span><b>✳</b><span>HUYỀN TRANG</span></div>
+      </section>
+
+      <section class="invitation" id="details">
+        <div class="invitation-inner">
+          <div class="section-index light">02 <span>—</span> THE CELEBRATION</div>
+          <p class="eyebrow light-eyebrow">TRÂN TRỌNG KÍNH MỜI</p>
+          <h2>Đến chung vui<br><i>cùng gia đình chúng mình</i></h2>
+          <div class="family-row"><div><span class="mini-label">NHÀ TRAI</span><strong class="edit-value">[Tên bố mẹ chú rể]</strong><strong class="edit-value">[Tên bố mẹ chú rể]</strong></div><span class="family-amp">&</span><div><span class="mini-label">NHÀ GÁI</span><strong class="edit-value">[Tên bố mẹ cô dâu]</strong><strong class="edit-value">[Tên bố mẹ cô dâu]</strong></div></div>
+          <div class="couple-line"><span>Khắc Sơn</span><i>&</i><span>Huyền Trang</span></div>
+          <div class="event-grid">
+            <article class="event-card"><span class="event-icon">01</span><span class="mini-label">LỄ THÀNH HÔN</span><strong class="edit-value">[Giờ, ngày, tháng, năm]</strong><span class="event-foot">TƯ GIA NHÀ TRAI · <em class="edit-value">[Địa chỉ]</em></span></article>
+            <article class="event-card"><span class="event-icon">02</span><span class="mini-label">TIỆC CƯỚI</span><strong class="edit-value">[Giờ, ngày, tháng, năm]</strong><span class="event-foot">TƯ GIA / NHÀ HÀNG · <em class="edit-value">[Địa chỉ]</em></span></article>
+          </div>
+          <div class="countdown-wrap"><span class="mini-label">CÙNG ĐẾM NGƯỢC ĐẾN NGÀY VUI</span><div class="countdown" id="countdown"><div><b>--</b><span>NGÀY</span></div><i>:</i><div><b>--</b><span>GIỜ</span></div><i>:</i><div><b>--</b><span>PHÚT</span></div><i>:</i><div><b>--</b><span>GIÂY</span></div></div><p class="edit-note">Ngày cưới chưa có · điền ngày trong <code>script.js</code> để bật đếm ngược.</p></div>
+        </div>
+        <div class="invitation-ornament">✳</div>
+      </section>
+
+      <section class="calendar-section section-pad">
+        <div class="section-index">03 <span>—</span> MARK THE DAY</div>
+        <div class="calendar-layout"><div><p class="eyebrow">HẸN BẠN NHÉ</p><h2>Lưu lại ngày<br><i>mình gặp nhau.</i></h2><p class="muted calendar-desc">Ngày đẹp nhất sẽ sớm được cập nhật. Tấm lịch bên cạnh đang chừa chỗ cho ngày ấy.</p></div><div class="calendar-card"><div class="calendar-top"><span>OUR WEDDING DAY</span><span class="heart">♡</span></div><div class="calendar-month"><span class="edit-value">[THÁNG]</span><b class="edit-value">[NĂM]</b></div><div class="calendar-grid"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span><b class="calendar-date edit-value">?</b><p>NGÀY CƯỚI · CẦN CẬP NHẬT</p></div><div class="calendar-footer">Một dấu mốc nhỏ, một kỷ niệm thật lâu.</div></div></div>
+      </section>
+
+      <section class="gallery-section section-pad" id="gallery">
+        <div class="section-index">04 <span>—</span> LITTLE MOMENTS</div>
+        <div class="gallery-heading"><div><p class="eyebrow">NHỮNG KHOẢNH KHẮC CỦA CHÚNG MÌNH</p><h2>Album <i>ảnh</i></h2></div><p class="muted">Một vài khung hình đang đợi được lấp đầy<br>bằng những kỷ niệm đẹp của Sơn & Trang.</p></div>
+        <div class="gallery-grid"><div class="gallery-frame gallery-tall"><span class="frame-number">01</span><span class="photo-cross">+</span><span class="frame-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span></div><div class="gallery-frame"><span class="frame-number">02</span><span class="photo-cross">+</span><span class="frame-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span></div><div class="gallery-frame gallery-offset"><span class="frame-number">03</span><span class="photo-cross">+</span><span class="frame-caption">ẢNH CƯỚI · THAY ẢNH TẠI ĐÂY</span></div></div>
+      </section>
+
+      <section class="location-section">
+        <div class="location-photo photo-placeholder"><span class="photo-mark">♡</span><span class="photo-caption">ẢNH ĐỊA ĐIỂM · TUỲ CHỌN</span></div>
+        <div class="location-copy"><div class="section-index">05 <span>—</span> FIND US</div><p class="eyebrow">ĐƯỜNG ĐẾN NGÀY VUI</p><h2>Chúng mình<br><i>đợi bạn ở đây.</i></h2><span class="mini-label">ĐỊA ĐIỂM TỔ CHỨC</span><strong class="edit-value address">[Tên địa điểm / tư gia]</strong><p class="edit-value address-detail">[Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố]</p><div class="map-placeholder"><span>⌖</span><div><b>BẢN ĐỒ SẼ ĐƯỢC CẬP NHẬT</b><small>Thay bằng liên kết Google Maps khi có địa chỉ.</small></div></div><a class="text-link edit-link" href="#details">THÊM ĐỊA CHỈ VÀO THIỆP <span>↗</span></a></div>
+      </section>
+
+      <section class="rsvp-section section-pad"><div class="rsvp-card"><span class="rsvp-flower">✳</span><p class="eyebrow">SỰ HIỆN DIỆN CỦA BẠN</p><h2>Là món quà<br><i>quý giá nhất.</i></h2><p class="muted">Hãy nhắn cho chúng mình một lời xác nhận nhé.</p><button class="primary-button" id="rsvpButton" type="button">GỬI LỜI CHÚC <span>↗</span></button><p class="edit-note">Nút demo · chưa kết nối biểu mẫu xác nhận tham dự.</p></div></section>
+    </main>
+
+    <footer class="footer"><div class="footer-monogram">S <i>&</i> T</div><p>WITH LOVE, KHẮC SƠN & HUYỀN TRANG</p><span class="edit-note">THÔNG TIN LIÊN HỆ · [SỐ ĐIỆN THOẠI / ZALO]</span><small>Made with love · 2026</small></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
